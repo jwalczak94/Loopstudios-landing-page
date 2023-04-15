@@ -6,7 +6,8 @@ header {
   background-size: cover;
 
   @include m.respond(tab-port) {
-    background-image: url("./images/desktop/image-hero.jpg");
+    background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
+      url("./images/desktop/image-hero.jpg");
   }
 
   height: 650px;
@@ -20,6 +21,7 @@ header {
 
     @include m.respond(tab-port) {
       margin-bottom: 8.125rem;
+      padding-top: 4rem;
     }
 
     &__logo {

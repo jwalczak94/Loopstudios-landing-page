@@ -43,6 +43,9 @@ main {
       @include m.respond(tab-port) {
         padding: 3rem 0 0 3rem;
         max-width: 500px;
+
+        text-align: left;
+        gap: 1.5625rem;
       }
 
       @include m.respond(tab-land) {
