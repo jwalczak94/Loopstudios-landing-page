@@ -5,7 +5,7 @@ main {
   margin-top: 6rem;
 
   @include m.respond(tab-port) {
-    top-bottom: 10rem;
+    margin-top: 10rem;
   }
 
   .section-leader {

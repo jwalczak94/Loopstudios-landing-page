@@ -396,7 +396,7 @@ main {
 }
 @media only screen and (min-width: 48rem) {
   main {
-    top-bottom: 10rem;
+    margin-top: 10rem;
   }
 }
 main .section-leader {
