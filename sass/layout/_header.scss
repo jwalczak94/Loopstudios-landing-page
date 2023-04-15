@@ -1,0 +1,56 @@
+@use "../mixins" as m;
+
+header {
+  background-image: url("./images/mobile/image-hero.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  @include m.respond(tab-port) {
+    background-image: url("./images/desktop/image-hero.jpg");
+  }
+
+  height: 650px;
+
+  .header-nav {
+    @include m.main-content;
+    @include m.flex-center(0, row);
+    justify-content: space-between;
+    padding-top: 2.5rem;
+    margin-bottom: 11.875rem;
+
+    @include m.respond(tab-port) {
+      margin-bottom: 8.125rem;
+    }
+
+    &__logo {
+      height: 1.5rem;
+      position: static;
+      z-index: 999;
+
+      @include m.respond(tab-port) {
+        height: auto;
+      }
+    }
+
+    &__description {
+      @include m.main-content;
+
+      h1 {
+        border: 2px solid var(--white);
+        color: var(--white);
+
+        padding: 1.5rem;
+
+        max-width: 450px;
+
+        @include m.respond(tab-port) {
+          max-width: 590px;
+        }
+
+        @include m.respond(desktop) {
+          max-width: 650px;
+        }
+      }
+    }
+  }
+}

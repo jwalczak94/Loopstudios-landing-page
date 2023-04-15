@@ -1,0 +1,42 @@
+@use "mixins" as m;
+
+.links {
+  position: relative;
+
+  &::after {
+    content: "";
+    display: block;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 1px;
+    background-color: var(--white);
+    transition: all 0.3s;
+  }
+
+  @media (hover: hover) {
+    &:hover::after {
+      width: 24px;
+    }
+  }
+}
+
+.btn {
+  display: inline-block;
+  border: 1px solid var(--dark);
+  font-size: 0.875rem;
+  line-height: 2.5rem;
+  height: 2.5rem;
+  width: 157px;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  text-align: center;
+
+  @media (hover: hover) {
+    &:hover {
+      background-color: var(--dark);
+      color: var(--white);
+    }
+  }
+}
